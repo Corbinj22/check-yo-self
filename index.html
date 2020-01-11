@@ -1,43 +1,52 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Check Yo Self</title>
-</head>
-<body>
-  <nav class="navigation">
-    <h1 id="search-header">CHECK <span class=“span-header”>YO’</span> SELF</h1>
-    <button class= "search-button" type="submit"> <img class= "search-button-icon" src="http://simpleicon.com/wp-content/uploads/active-search.png"></button>
-    <input class="search-box" type="text" placeholder="Search"></input>
-  </nav>
-  <main>
-    <column class="column-left">
-      <p>Task Title</p>
-      <input type="text"></input>
-      <p>Task Item</p>
-      <input type="text"></input>
-      <button type="submit"> <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/plus-512.png"></button>
-      <button type="button">Make Task LIst</button>
-      <button type="button">Clear All</button>
-      <button type="button">Filter By Urgency</button>
-    </column>
-    <column class="column-right">
-      <div class="task-card">
-        <p class="task-card-title">
-        <input type="checkbox"></input>
-        <p class="user-card-tasks">Dont Ever Play Yourself</p>
-        <input type="checkbox"></input>
-        <p class="user-card-tasks">Every chance I get, I water the plants</p>
-        <input type="checkbox"></input>
-        <p class="user-card-tasks">Lion! Cloth Talk</p>
+<html>
+  <head>
+    <title>Check Yo' Self</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="nav-header">
+      <h1 class="title-header">CHECK <span class="title-span">YO'</span> SELF<h1>
+      <div class="search-bar">
+        <button type="submit" class="search-button"><img class="search-icon" src="https://static.thenounproject.com/png/101791-200.png"></button>
+        <input type="text" class="search-input" placeholder="Search">
       </div>
-    </column>
-  </main>
-  <script src="task.js"></script>
-  <script src="todo-list.js"></script>
-  <script src="main.js"></script>
-</body>
-
+    </nav>
+    <div class="main">
+      <section class="left-column">
+        <div class="left-text-container">
+          <p class="task-title">Task Title</p>
+        </div>
+        <input type="text" class="title-input">
+        <div class="updated-task-box">
+        </div>
+        <div class="left-text-container">
+          <p class="task-item">Task Item</p>
+        </div>
+        <div class="task-container">
+          <input type="text" class="task-item-input">
+          <button disabled type="submit" class="button task-button">+</button>
+        </div>
+        <button type="submit" class="button create-button form-button">Make Task List</button>
+        <button disabled type="submit" class="button clear-button form-button">Clear All</button>
+        <div class="filter-container">
+          <button disabled type="submit" class="button filter-button form-button">Filter By Urgency</button>
+        </div>
+      </section>
+      <section class="right-column">
+        <section class="task-card">
+          <div class="card-title-container">
+            <p class="task-card-title">Task Title</p>
+          </div>
+          <div class="task-cards-tasks">
+          <div class="card-task-container">
+            <input type="checkbox" class="task-checkbox">
+            <p class="task">Start writing JS</p>
+          </div>
+          </div>
+      </section>
+    </div>
+  </body>
+  <script type="text/javascript" src="task.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="todo-list.js"></script>
 </html>
