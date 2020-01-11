@@ -6,11 +6,19 @@ var searchButton = document.querySelector('.search-button');
 var createTaskButton = document.querySelector('.form-button')
 var clearButton = document.querySelector('.clear-button');
 var filterButton = document.querySelector('.filter-button');
+var leftColumn = document.querySelector('.left-column');
 
 
+// Event listeners
+leftColumn.addEventListener('keyup', enableAddTaskButton);
 
-function ableTaskButton() {
-  if(userTaskItem.value !== "" || userTaskName.value !== "") {
-    clearButton.disabled = false;
-  }
+
+//toggle state of all buttons left-section
+function enableAddTaskButton() {
+  createTaskButton.disabled = userTaskItem.value == "";
+}
+
+function addTaskToLeftSection() {
+  
+
 }
