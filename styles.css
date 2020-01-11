@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  height:100%;
+  width:100%;
+  }​
+
+nav {
+  display:flex;
+  width:100px;
+  height:500px;
+  flex-direction: row;
+  background-color: blue;
+}
+
+.search-button-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.search-box {
+  height:30px;
+  width: 100px;
+}
