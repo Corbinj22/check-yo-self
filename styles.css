@@ -195,6 +195,15 @@ button:disabled {
   margin-left: 2%;
 } */
 
+.updated-task-box p {
+  margin: 4% 0% 0% 4%;
+  width: 30%;
+}
+
+.task-button-clear {
+  margin-right: 5%;
+}
+
 .right-column {
   background-color: #f3f6f7;
   height: 100%;
