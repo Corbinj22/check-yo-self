@@ -11,14 +11,18 @@ var leftColumn = document.querySelector('.left-column');
 
 // Event listeners
 leftColumn.addEventListener('keyup', enableAddTaskButton);
+clearButton.addEventListener('click', clearInputField);
 
 
 //toggle state of all buttons left-section
 function enableAddTaskButton() {
   createTaskButton.disabled = userTaskItem.value == "";
+  clearButton.disabled = userTaskItem.value == "";
+
 }
 
-function addTaskToLeftSection() {
-  
-
+//Clear user input fields
+function clearInputField() {
+userTaskItem.value = '';
+userTaskName.value = '';
 }
