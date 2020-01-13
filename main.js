@@ -27,7 +27,7 @@ addTaskButton.addEventListener('click', function() {
 
 // clear all input left column
 clearButton.addEventListener('click', clearInputField);
-// createTaskList.addEventListener('click', addTaskCard)
+createTaskCard.addEventListener('click', generateTaskCard)
 body.addEventListener('click', eventClickHandler);
 
 // Global event click-handler left column
@@ -37,7 +37,7 @@ function eventClickHandler(e) {
   }
 }
 
-//Toggle state of all buttons left-section
+//Toggle state of buttons left-section
 function enableAddTaskButton() {
   addTaskButton.disabled = userTaskItem.value == "";
   clearButton.disabled = userTaskItem.value == "";
@@ -46,7 +46,6 @@ function enableAddTaskButton() {
 //Clear user input fields
 function clearInputField() {
   userTaskItem.value = '';
-  // userTaskName.value = '';
   enableAddTaskButton();
 }
 
@@ -70,14 +69,17 @@ function removeTask() {
 
 function removeTask() {
   var targetID = event.target.closest("p").id;
-  
 }
 
 function enableMakeTaskList() {
 if((userTaskName.value != '') && (currentTaskList.tasks.length > 0)) {
   createTaskCard.removeAttribute('disabled');
-} else {
+  } else {
   createTaskCard.setAttribute('disabled', '');
-
+  }
 }
+
+// generates task card based on user input
+function generateTaskCard() {
+  
 }
