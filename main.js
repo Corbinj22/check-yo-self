@@ -12,6 +12,9 @@ var addTaskButton = document.querySelector('.task-button');
 var leftColumn = document.querySelector('.left-column');
 var taskStagingArea = document.querySelector('.updated-task-box');
 var deleteTaskButton = document.querySelector('.task-button-clear');
+var userGeneratedTaskName = document.querySelector('.task-card-title');
+var userGeneratedTasks = document.querySelector('.task');
+
 
 // Event listener on input left column
 leftColumn.addEventListener('keyup', function() {
@@ -27,8 +30,9 @@ addTaskButton.addEventListener('click', function() {
 
 // clear all input left column
 clearButton.addEventListener('click', clearInputField);
-createTaskCard.addEventListener('click', generateTaskCard)
+createTaskCard.addEventListener('click', generateTaskCard);
 body.addEventListener('click', eventClickHandler);
+createTaskCard.addEventListener('click', generateTaskCard);
 
 // Global event click-handler left column
 function eventClickHandler(e) {
@@ -67,9 +71,6 @@ function removeTask() {
   enableMakeTaskList();
 }
 
-function removeTask() {
-  var targetID = event.target.closest("p").id;
-}
 
 function enableMakeTaskList() {
 if((userTaskName.value != '') && (currentTaskList.tasks.length > 0)) {
@@ -81,5 +82,10 @@ if((userTaskName.value != '') && (currentTaskList.tasks.length > 0)) {
 
 // generates task card based on user input
 function generateTaskCard() {
-  
+  // var test = taskStagingArea.childNodes;
+  userGeneratedTaskName.insertAdjacentHTML("beforeend", userTaskName.value);
+
+  taskStagingArea.innerHTML = '';
+
+
 }
